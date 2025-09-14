@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mixtape</title>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/assets/icon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+ <style>:root{--bg:#f3f6fb;--panel:#ffffff;--accent:#d9b6c9;--accent-2:#b9d7e6;--muted:#6b7885;--ink:#0f1724;--glass:rgba(15,23,36,0.03);--soft-shadow:0 8px 24px rgba(15,23,36,0.06)}*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(600px 220px at 10% 20%,rgba(185,215,230,0.35),transparent 12%),radial-gradient(600px 220px at 90% 80%,rgba(217,182,201,0.23),transparent 12%),linear-gradient(180deg,var(--bg),#eef4fb 100%);color:var(--ink);padding:28px;-webkit-font-smoothing:antialiased}.p{width:920px;max-width:96vw;background:var(--panel);border-radius:14px;padding:18px;display:flex;gap:18px;box-shadow:var(--soft-shadow)}.vArea{width:360px;display:flex;flex-direction:column;align-items:center;gap:14px;padding:8px}.vWrap{width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(217,182,201,0.06),transparent 18%),conic-gradient(from 90deg,rgba(235,243,247,0.9) 0 25%,rgba(240,245,249,0.9) 25% 50%);display:flex;align-items:center;justify-content:center;position:relative;transition:transform .2s}.v{width:86%;height:86%;border-radius:50%;background:radial-gradient(circle at 50% 50%,#0b0f12 0 16%,#0a0f14 36%,#05121a 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.g::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:10px 10px;mix-blend-mode:overlay;opacity:0.45}.lbl{width:40%;height:40%;border-radius:50%;background:linear-gradient(180deg,var(--accent-2),var(--accent));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0b2430;font-weight:700;box-shadow:0 6px 14px rgba(8,18,24,0.06);font-family:"Playfair Display","Brush Script MT",cursive;font-size:15px;padding:6px;text-transform:lowercase}.spin{animation:spin 3.8s linear infinite}.stopped{animation-play-state:paused!important}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.s{flex:1;display:flex;gap:14px;flex-direction:column}.r{display:flex;gap:12px;align-items:center;justify-content:space-between}.t{font-size:20px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:10px}.t .n{font-family:"Space Mono",monospace;font-size:12px;color:var(--muted);margin-left:6px;font-weight:600;opacity:0.9}.sub{color:var(--muted);font-size:13px}.lists{display:flex;gap:12px}.side{background:transparent;border-radius:12px;padding:12px;width:100%;min-width:0;border:1px solid rgba(15,23,36,0.05)}.side h3{margin:0 0 8px 0;font-size:15px;color:var(--ink);letter-spacing:0.2px}.sng{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;cursor:pointer;transition:background .14s,transform .08s;background:transparent}.sng:hover{background:rgba(185,215,230,0.06);transform:translateY(-3px)}.nnum{width:36px;height:36px;border-radius:8px;background:rgba(15,23,36,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}.st{flex:1;font-size:14px;color:var(--ink);font-weight:600}.meta{font-size:12px;color:var(--muted)}.ctrl{display:flex;gap:8px;align-items:center;margin-top:6px}.b{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.96));border:1px solid rgba(15,23,36,0.06);color:var(--ink);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:700}.b.snd{background:transparent;border:1px dashed rgba(15,23,36,0.04);color:var(--muted);font-weight:600}.now{margin-top:8px;font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center}.np-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(180deg,var(--accent),var(--accent-2));display:inline-block;opacity:0;transform-origin:center}@keyframes hb{0%{transform:scale(1);opacity:0.25}30%{transform:scale(1.4);opacity:0.95}60%{transform:scale(1);opacity:0.5}100%{transform:scale(1);opacity:0.25}}.np-dot.pulse{animation:hb 3.14s ease-in-out infinite}@media (max-width:880px){.p{flex-direction:column;align-items:center}.vArea{width:100%}.lists{flex-direction:column}}.cursive{font-family:"Playfair Display",cursive;font-style:italic;color:rgba(11,34,48,0.8);font-size:13px}.gch{transition:all 0.3s ease}</style>
+</head>
+<body>
+<div class="p" role="application" aria-label="Mixtape">
+  <div class="vArea">
+    <div class="vWrap" id="w" aria-hidden="true">
+      <div class="v spin g" id="v">
+        <div class="lbl" id="l">for you</div>
+      </div>
+    </div>
+
+
+    <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+      <div class="ctrl">
+        <button class="b" id="pBtn">Play</button>
+        <button class="b snd" id="fBtn">Flip</button>
+        <button class="b snd" id="shBtn">Shuffle</button>
+      </div>
+      <div class="now" aria-live="polite">
+        <span id="d" class="np-dot" aria-hidden="true"></span>
+        <div>
+          <div id="t" style="font-weight:700;color:var(--ink);">—</div>
+          <div id="s" style="font-size:12px;color:var(--muted)">—</div>
+        </div>
+      </div>
+      <div style="margin-top:8px"><span class="cursive">there was a moment,<br>when i was infatuated with you (I still am), This is for that moment.I wish you beautiful life ahead...<br>ps. i won't bother you anymore</span></div>
+    </div>
+  </div>
+
+  <div class="s">
+    <div class="r">
+      <div style="display:flex;flex-direction:column;">
+        <div class="t">Mixtape for {˶˃ ᵕ ˂˶} u </div>
+      </div>
+      <div class="sub" id="sideLbl">Side: <strong>Side A</strong></div>
+    </div>
+
+    <div class="lists">
+      <div class="side" id="A">
+        <h3>Side A</h3>
+        <div id="LA"></div>
+      </div>
+
+      <div class="side" id="B">
+        <h3>Side B</h3>
+        <div id="LB"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<audio id="aud" preload="metadata"></audio>
+
+ <script>const GC=['a','i','h','s','t','v'];const GCOL=['#006f30','#2167c1','#8f39b7','#b93278','#b93278'];const SC=GCOL[Math.floor(Math.random()*GCOL.length)];function h2r(h,a){const r=parseInt(h.slice(1,3),16);const g=parseInt(h.slice(3,5),16);const b=parseInt(h.slice(5,7),16);return `rgba(${r}, ${g}, ${b}, ${a})`}function glowAll(){const all=[];M.sides.A.forEach(s=>all.push({t:s.title,sd:'A'}));M.sides.B.forEach(s=>all.push({t:s.title,sd:'B'}));const pos={};GC.forEach(c=>pos[c]=[]);all.forEach((it,ti)=>{const chars=it.t.split('');chars.forEach((ch,ci)=>{const lc=ch.toLowerCase();if(pos[lc]!==undefined){pos[lc].push({ti,ci,sd:it.sd})}})});const sel=new Map();GC.forEach(c=>{const p=pos[c];if(p&&p.length){const rnd=p[Math.floor(Math.random()*p.length)];sel.set(`${rnd.ti}-${rnd.ci}`,{c,sd:rnd.sd})}});document.querySelectorAll('.st').forEach(el=>{const txt=el.textContent;const chs=txt.split('');const songEl=el.closest('.sng');const sd=songEl?songEl.dataset.sd:'A';const idx=parseInt(songEl?songEl.dataset.i:'0',10);const gIdx=sd==='A'?idx:M.sides.A.length+idx;const out=chs.map((ch,ci)=>{const key=`${gIdx}-${ci}`;const sp=sel.get(key);if(sp&&sp.sd===sd){const c1=h2r(SC,0.6);const c2=h2r(SC,0.4);const c3=h2r(SC,0.3);return `<span class="gch" style="color:${SC}; text-shadow:0 0 8px ${c1}, 0 0 16px ${c2}, 0 0 24px ${c3};">${ch}</span>`}return ch}).join('');el.innerHTML=out})}function applyGlow(){glowAll()}const M={sd:'A',sides:{A:[{title:"Can't Help Falling ...",artist:'Kina Grannis',src:"https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Can't Help Falling In Love.mp3"},{title:"I'll Have To Say ...",artist:'Jim Croce',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/I ll Have To Say I Love You In A Song.mp3'},{title:'Possibility',artist:'Lykke Li',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Possibility.mp3'},{title:'Frozen Lullaby',artist:'Garfunkel and Oates',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Frozen Lullaby.mp3'},{title:'I Dont Have Anything',artist:'Vast',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/I Dont Have Anything.mp3'}],B:[{title:'Darav Darav',artist:'JK,AVP',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Darav Darav.mp3'},{title:'Anyone Who Knows What Love Is',artist:'Irma Thomas',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Anyone Who Knows What Love Is (Will Understand.mp3'},{title:'Cupid',artist:'Sam Cooke',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Cupid.mp3'},{title:'If I Be Wrong',artist:'Wolf Larsen',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/If I Be Wrong.mp3'},{title:'Fathers Lament',artist:"Poor Man's Poison",src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Fathers Lament.mp3'},{title:'Godspeed',artist:'Frank Ocean',src:'https://raw.githubusercontent.com/ovily/ovily.github.io/refs/heads/main/songs/Godspeed.mp3'}]}};const aud=document.getElementById('aud');const LA=document.getElementById('LA');const LB=document.getElementById('LB');const pBtn=document.getElementById('pBtn');const fBtn=document.getElementById('fBtn');const shBtn=document.getElementById('shBtn');const vEl=document.getElementById('v');const lEl=document.getElementById('l');const tEl=document.getElementById('t');const sEl=document.getElementById('s');const dEl=document.getElementById('d');const sideLbl=document.getElementById('sideLbl');let ci=0;let play=false;let ps='A';let sh=false;function R(){LA.innerHTML='';LB.innerHTML='';M.sides.A.forEach((s,i)=>LA.appendChild(makeS(s,i,'A')));M.sides.B.forEach((s,i)=>LB.appendChild(makeS(s,i,'B')));setTimeout(()=>applyGlow(),50)}function makeS(s,i,sd){const w=document.createElement('div');w.className='sng';w.tabIndex=0;w.dataset.sd=sd;w.dataset.i=i;w.innerHTML=`<div class="nnum">${i+1}</div><div style="min-width:0"><div class="st">${s.title}</div><div class="meta">${s.artist}</div></div>`;w.addEventListener('click',()=>playS(sd,i));w.addEventListener('keydown',(e)=>{if(e.key==='Enter')playS(sd,i)});return w}function playS(sd,i){ps=sd;ci=i;const s=M.sides[sd][i];aud.src=s.src;aud.currentTime=0;aud.play().catch(()=>{});play=true;upd()}function toggle(){if(!aud.src){playS(ps,0);return}if(aud.paused){aud.play().catch(()=>{});play=true}else{aud.pause();play=false}upd()}function nxt(){const arr=M.sides[ps];if(sh){ci=Math.floor(Math.random()*arr.length)}else{ci=(ci+1)%arr.length}playS(ps,ci)}function prev(){const arr=M.sides[ps];if(sh){ci=Math.floor(Math.random()*arr.length)}else{ci=(ci-1+arr.length)%arr.length}playS(ps,ci)}function flip(){ps=ps==='A'?'B':'A';ci=0;lEl.textContent=ps==='A'?'For You':'By Me';sideLbl.innerHTML='Side: <strong>Side '+ps+'</strong>';if(play)playS(ps,0);else upd()}function upd(){pBtn.textContent=play?'Pause':'Play';if(play){vEl.classList.remove('stopped');dEl.classList.add('pulse')}else{vEl.classList.add('stopped');dEl.classList.remove('pulse')}lEl.textContent=ps==='A'?'For You':'By Me';const cur=M.sides[ps][ci];if(cur&&play){tEl.textContent=cur.title;sEl.textContent=cur.artist+' — Side '+ps+' • Track '+(ci+1)}else{tEl.textContent='—';sEl.textContent='—'}document.querySelectorAll('.sng').forEach(el=>{el.style.outline='none';if(el.dataset.sd===ps&&Number(el.dataset.i)===ci&&play){el.style.background='linear-gradient(90deg, rgba(185,215,230,0.12), rgba(217,182,201,0.06))'}else{el.style.background='transparent'}})}aud.addEventListener('ended',()=>{nxt()});pBtn.addEventListener('click',toggle);fBtn.addEventListener('click',flip);shBtn.addEventListener('click',()=>{sh=!sh;shBtn.textContent=sh?'Shuffle: On':'Shuffle';shBtn.style.opacity=sh?'1':'0.8'});window.addEventListener('keydown',(e)=>{if(e.code==='Space'){e.preventDefault();toggle()}if(e.key==='ArrowRight'){e.preventDefault();nxt()}if(e.key==='ArrowLeft'){e.preventDefault();prev()}if(e.key==='s'){e.preventDefault();flip()}});R();upd();vEl.classList.add('stopped');setTimeout(()=>applyGlow(),100);</script>
+</body>
+</html>
+
